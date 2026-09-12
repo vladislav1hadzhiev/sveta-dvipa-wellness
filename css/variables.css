@@ -1,0 +1,153 @@
+/* ================================
+   ROOT VARIABLES
+================================ */
+
+:root {
+
+    /* ========= Colors ========= */
+
+    /* Brand */
+
+    /* Primary */
+    
+        --clr-primary-50: #E2F4F8;
+        --clr-primary-100: #D0EDF3;
+        --clr-primary-200: #B7DFE8;
+        --clr-primary-300: #93D5E3;
+        --clr-primary-400: #84C2D1;
+        --clr-primary-500: #76ACB7;
+        --clr-primary-600: #6B8E9A;
+        --clr-primary-700: #406067;
+        --clr-primary-800: #273D42;
+        --clr-primary-900: #1B2A2E;
+        --clr-primary-950: #111D20;
+
+    /* Secondary */
+    
+        --clr-secondary-50: #DEF8D3;
+        --clr-secondary-100: #CFEFBE;
+        --clr-secondary-200: #BDE3A8;
+        --clr-secondary-300: #AAE091;
+        --clr-secondary-400: #98C67F;
+        --clr-secondary-500: #8AB675;
+        --clr-secondary-600: #6B8E5A;
+        --clr-secondary-700: #4D6841;
+        --clr-secondary-800: #324429;
+        --clr-secondary-900: #22301D;
+        --clr-secondary-950: #182313;
+    
+
+
+    /* Accent */
+    --clr-accent-50: #f8f4ee;
+    --clr-accent-100: #f7f0e8;
+    --clr-accent-200: #f1e4d6;
+    --clr-accent-300: #e3cdb7;
+    --clr-accent-400: #cda883;
+    --clr-accent-500: #b07942;
+    --clr-accent-600: #825529;
+    --clr-accent-700: #5f3a17;
+    --clr-accent-800: #4b2b0b;
+    --clr-accent-900: #452608;
+   
+
+    /* Neutral */
+
+    --clr-white: #FFFFFF;
+    --clr-background: #FAF9F6;
+    --clr-surface: #FFFFFF;
+
+    --clr-border: #D9E5D8;
+
+    /* Text */
+
+    --clr-text-primary: #1B1B1B;
+    --clr-text-secondary: #555555;
+    --clr-text-muted: #8A8A8A;
+
+    /* Status */
+
+    --clr-success: #4CAF50;
+    --clr-warning: #F4B740;
+    --clr-error: #D9534F;
+    --clr-info: #4A90E2;
+
+
+    /* ========= Typography ========= */
+
+    --font-primary: "Source Sans 3", sans-serif;
+    --font-ui: "DM Sans", sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ========= Font Sizes ========= */
+
+    --fs-display: 4rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.5rem;
+    --fs-body-lg: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+
+    /* ========= Line Height ========= */
+
+    --lh-heading: 1.2;
+    --lh-body: 1.6;
+
+    /* ========= Spacing (8px Grid) ========= */
+
+    --space-4: .25rem;
+    --space-8: .5rem;
+    --space-12: .75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-40: 2.5rem;
+    --space-48: 3rem;
+    --space-64: 4rem;
+    --space-80: 5rem;
+    --space-96: 6rem;
+
+    /* ========= Border Radius ========= */
+    --radius-2xl: 2rem;
+        /* 32px */
+        --radius-pill: 9999px;
+        /* За напълно овални бутони */
+    --radius-sm: .5rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-pill: 999px;
+
+    /* ========= Shadows ========= */
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, .10);
+
+    /* ========= Transition ========= */
+
+    --transition-fast: .2s ease;
+    --transition: .3s ease;
+
+    /* ========= Layout ========= */
+    --container-width: 1440px;
+    --container-padding: 2rem;
+    --header-height: 96px;
+
+}
+:root {
+
+    --color-page-bg: var(--clr-background);
+    --color-card-bg: var(--clr-surface);
+    --color-heading: var(--clr-text-primary);
+    --color-body: var(--clr-text-secondary);
+    --color-button: var(--clr-primary);
+    --color-button-hover: var(--clr-primary-hover);
+    --color-button-text: var(--clr-white);
+}

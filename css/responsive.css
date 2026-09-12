@@ -1,0 +1,945 @@
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1400px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .logo img {
+    width: 300px;
+    height: auto;
+  }
+  .hero__image img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+  }
+  #heroDescription {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .hero__description p {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  .hero__title {
+    font-size: 3.4rem;
+  }
+  .hero__subtitle {
+    font-size: 2rem;
+    width: auto;
+  }
+  .retreats {
+    width: 96%;
+
+    background-image: url(../assets/images/yoga_class.jpeg);
+    background-size: cover;
+    background-position: center 70%;
+
+    border-radius: 1rem;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+  }
+  .testimonials__background {
+    position: relative;
+    /* right: -15px; */
+  }
+  .footer__divider {
+    width: calc(100% + (var(--container-padding) * 2));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+@media (max-width: 1200px) {
+  .logo img {
+    width: 280px;
+    height: auto;
+  }
+  .therapy-grid-Ayurvedic {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .therapy-grid-TCM {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .therapy-card {
+    padding: 0.5rem 1.4rem;
+    width: auto;
+    height: auto;
+  }
+  .therapy-card-big {
+    width: 100%;
+    max-width: var(--container-width);
+    /* padding-inline: 1.5rem; */
+    gap: 1.25rem;
+  }
+  .therapy-card-big .therapy-card {
+    padding: 1.25rem;
+  }
+  .therapy-card-online {
+    padding: 0.5rem 1.4rem;
+    gap: 1.5rem;
+  }
+  .therapy-card__title {
+    font-size: 1.2rem;
+  }
+  .therapy-card__subtitle {
+    font-size: 1rem;
+  }
+  .therapy-card__image {
+    max-width: fit-content;
+  }
+  /* .therapy-card__content {
+    max-width: 44ch;
+  } */
+  .therapy-card__footer {
+    width: 100%;
+  }
+  .therapy-card__image img {
+    width: calc(100%);
+    height: auto;
+    display: block;
+  }
+  .therapy-card-big,
+  .therapy-card__description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+  .session-card__content {
+    padding: 0.9rem;
+  }
+  .therapy-card .button {
+    width: 100%;
+  }
+  .therapy-card__footer_btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .therapy-grid-tcm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .retreats__text p {
+    font-size: 1.8rem;
+  }
+  .upcoming-retreats {
+    gap: 2rem;
+    max-width: var(--container-width);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-12);
+    font-size: 1.4rem;
+    padding: var(--space-24);
+  }
+  .retreat-content {
+    padding-right: inherit;
+  }
+  .retreat-image {
+    width: 540px;
+  }
+  .testimonials__background {
+    position: relative;
+    right: -5%;
+  }
+}
+
+/* ==========================================
+   Tablet Landscape
+========================================== */
+@media (max-width: 992px) {
+  .booking-modal {
+    align-items: flex-start;
+    padding: 14px;
+  }
+  .header__actions {
+    display: flex;
+    flex-direction: column;
+    place-items: flex-start;
+    gap: 12px;
+  }
+  .hero__content {
+    gap: 1rem;
+  }
+  .hero__image {
+    flex: 1 12rem;
+    max-width: 26rem;
+  }
+  .hero__image img {
+    width: 100%;
+    object-position: center;
+  }
+  .booking-modal__container {
+    max-height: none;
+  }
+
+  .booking-modal__header {
+    padding: 30px 24px 24px;
+  }
+
+  .booking-modal__body {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-modal__form-column {
+    padding: 0 24px 32px;
+  }
+
+  .booking-modal__visual {
+    min-height: 280px;
+  }
+
+  .booking-modal__image {
+    min-height: 280px;
+    max-height: 360px;
+  }
+
+  .booking-modal__visual::before {
+    background: linear-gradient(90deg, rgba(25, 53, 42, 0.25), transparent 70%);
+  }
+  .practices__description {
+    width: 100%;
+  }
+  .purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about__content {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about__image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about__image img {
+    width: 100%;
+    height: 450px;
+    object-position: center 60%;
+  }
+  #about > div > div.about__content > div.about__text > div {
+    display: flex;
+    flex-direction: row;
+  }
+  .therapy-grid-Ayurvedic,
+  .therapy-grid-TCM {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .therapy-card-big {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .therapy-card-online {
+    display: flex;
+    flex-direction: column;
+  }
+  .therapy-card__footer_btns {
+    display: flex;
+    flex-direction: row;
+  }
+  .therapy-card_online .therapy-card__footer_btns,
+  .button {
+    width: 100%;
+  }
+  .therapy-card__footer_btns p {
+    padding: 8px;
+  }
+  .guidance-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer__divider {
+    width: calc(100% + (var(--container-padding) * 2));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .header .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo menu"
+      "actions actions"
+      "nav nav";
+
+    padding-inline: 1.8rem;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .header__menu-toggle {
+    grid-area: menu;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #7eafc0;
+    color: #fff;
+
+    font-size: 22px;
+    box-shadow: 0 10px 25px rgba(126, 175, 192, 0.25);
+
+    transition: 0.3s;
+  }
+
+  .header__menu-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(126, 175, 192, 0.35);
+  }
+  .header__actions {
+    grid-area: actions;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .header__actions span {
+    font-size: 1.4rem;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .practices__description {
+    max-width: 80%;
+  }
+  .vision__grid {
+    gap: 1rem;
+  }
+  .section-header__title {
+    font-size: 2rem;
+  }
+  .therapy-card__content {
+    width: 100%;
+  }
+  .therapy-card-big,
+  .therapy-card-online {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .section-description {
+    font-size: 1.4rem;
+  }
+  .therapy-card__description {
+    padding-top: 12px;
+  }
+  .therapy-card__description_info {
+    text-align: center;
+    padding: 18px 0 18px 0;
+    font-size: 1.2rem;
+  }
+  .therapy-card__image {
+    height: 240px;
+    overflow: hidden;
+  }
+  .therapy-card__image img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .therapy-grid-Ayurvedic {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .therapy-grid-TCM {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .guidance-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .retreats__text p {
+    font-size: 1.4rem;
+    padding-top: 12px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+  .programme-intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .upcoming-retreats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .retreat-content {
+    justify-content: center;
+  }
+  .programme {
+    padding: 40px 20px;
+  }
+  .programme-content h2 {
+    font-size: 2rem;
+  }
+  .rasayana {
+    position: relative;
+  }
+  .rasayana-background {
+    font-size: 6rem;
+    position: absolute;
+  }
+  .rasayana-content h2 {
+    padding-bottom: 24px;
+  }
+  .rasayana-content p {
+    font-size: 1.2rem;
+  }
+  .rasayana-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header__actions.button--secondary,
+  .booking-modal__trigger {
+    width: 100%;
+  }
+  .therapy-card .button--secondary {
+    width: 100%;
+  }
+  .therapy-card {
+    height: auto;
+  }
+  .therapy-card__options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .testimonial-card__quote {
+    width: 100%;
+  }
+  .testimonials__layout {
+    display: grid;
+    grid-template-columns: 1fr 14rem;
+    gap: 0.5rem;
+  }
+
+  .testimonial-card__author {
+    margin: 12px;
+  }
+  .testimonial-card__avatar {
+    align-self: center;
+  }
+  .navigation {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease;
+
+    background: #faf8f3;
+
+    border-top: 1px solid #ece4d3;
+  }
+
+  .navigation.active {
+    max-height: 350px;
+    opacity: 1;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 24px;
+  }
+  .footer__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .footer__brand,
+  .footer__navigation,
+  .footer__services,
+  .footer__contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__description {
+    max-width: 500px;
+  }
+
+  .footer__list,
+  .footer__list_contact {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .footer__legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+   
+}
+/* ========================================
+            RESPONSIVE – MAIN PAGE
+======================================== */
+
+/* ---------- Tablet / small laptop ---------- */
+
+@media (max-width: 576px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .header .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo menu"
+      "actions actions"
+      "nav nav";
+    gap: 30px;
+    align-items: center;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .header__menu-toggle {
+    grid-area: menu;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #7eafc0;
+    color: #fff;
+
+    font-size: 22px;
+    box-shadow: 0 10px 25px rgba(126, 175, 192, 0.25);
+
+    transition: 0.3s;
+  }
+
+  .header__menu-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(126, 175, 192, 0.35);
+  }
+  .header__actions {
+    grid-area: actions;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .header__actions span {
+    font-size: 1.4rem;
+  }
+  .vision__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section-header__title {
+    font-size: 2rem;
+  }
+  .section-description {
+    font-size: 1.4rem;
+  }
+  .therapy-card__description {
+    padding-top: 12px;
+  }
+  .therapy-card__description_info {
+    text-align: center;
+    padding: 18px 0 18px 0;
+  }
+  .therapy-grid-Ayurvedic {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .therapy-grid-TCM {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .retreats__text p {
+    font-size: 1.4rem;
+    padding-top: 12px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+  .section-header-training h2{
+    font-size: 1.6rem;
+  }
+  .programme {
+    padding: 40px 20px;
+  }
+  .programme-content h2 {
+    font-size: 2rem;
+  }
+  .rasayana {
+    position: relative;
+  }
+  .rasayana-background {
+    font-size: 6rem;
+    position: absolute;
+  }
+  .rasayana-content h2 {
+    padding-bottom: 24px;
+  }
+  .rasayana-content p {
+    font-size: 1.2rem;
+  }
+  .rasayana-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .therapy-card {
+    height: auto;
+  }
+  .therapy-card__options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .testimonial-card__quote {
+    width: 100%;
+  }
+  .testimonials__layout {
+    display: grid;
+    grid-template-columns: 1fr 14rem;
+    gap: 0.5rem;
+  }
+
+  .testimonial-card__author {
+    margin: 12px;
+  }
+  .testimonial-card__avatar {
+    align-self: center;
+  }
+  .navigation {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease;
+
+    background: #faf8f3;
+
+    border-top: 1px solid #ece4d3;
+  }
+
+  .navigation.active {
+    max-height: 350px;
+    opacity: 1;
+  }
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 24px;
+  }
+  .footer__brand {
+    justify-content: center;
+  }
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .header .container {
+    gap: 20px;
+  }
+ 
+  .section-description {
+    width: 100%;
+  }
+  .therapy-card__footer_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+ .therapy-card__description{
+  line-height: normal;
+ }
+  .about__image img {
+    height: auto;
+  }
+  .practices__description{
+    max-width: 90%;
+  }
+  #about > div > div.about__content > div.about__text > div{
+    display: flex;
+    flex-direction: column;
+  }
+  .header__actions {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 100%;
+    padding-top: 12px;
+  }
+  .therapy-card__image{
+    height: auto;
+  }
+  .locations {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .header__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+  .retreat-image {
+    display: flex;
+    justify-content: center;
+  }
+  .retreat-image img {
+    width: auto;
+    object-fit: cover;
+    object-position: 4% center;
+  }
+  .section-header-training {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials__background {
+    left: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+  .testimonials__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__legal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vision__grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .container{
+    padding-inline: 1rem;
+  }
+  .header .container{
+    gap: 18px;
+  }
+  .header__actions{
+    gap: 24px;
+  }
+  
+  .header__actions span{
+    font-size: 1.2rem;
+  }
+  .hero__title{
+    font-size: 2.4rem;
+  }
+  .section-header__title{
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .title-full {
+    display: none;
+  }
+
+  .title-short {
+    display: inline;
+  }
+  .guidance{
+    margin: 18px;
+  }
+  .guidance-card{
+    padding: 14px;
+  }
+  .purpose-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  #about > div > div.about__content > div.about__text > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-gallery{
+    height: 354px;
+    width: 354px;
+  }
+ 
+}
+
+@media (max-width: 393px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .header .container {
+    gap: 24px;
+    padding-inline: 1rem;
+  }
+  .header__buttons,
+  .header__actions {
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .button {
+    padding: 0.6rem 0.6rem;
+    font-size: 1.2rem;
+  }
+  .hero__title {
+    font-size: 2.4rem;
+  }
+  #heroDescription {
+    -webkit-line-clamp: 12;
+  }
+  .hero__image img {
+    height: 21rem;
+  }
+  .hero__image {
+    width: 22rem;
+  }
+  .section-header__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .journey__track{
+    gap: 1rem;
+  }
+  .purpose-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .title-full {
+    display: none;
+  }
+
+  .title-short {
+    display: inline;
+  }
+  
+  /*  */
+  .about__image {
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+  }
+  .about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.4);
+  }
+  .therapy-card__description_info {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .logo img {
+    width: 18rem;
+  }
+  .footer__description {
+    font-size: 1.4rem;
+  }
+}
