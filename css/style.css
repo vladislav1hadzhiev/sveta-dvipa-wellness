@@ -57,7 +57,7 @@ body {
 =========================== */
 
 .header {
-  padding: .8rem 0;
+  padding: 0.8rem 0;
 }
 .header .container {
   display: flex;
@@ -74,7 +74,6 @@ body {
   justify-content: flex-end;
   padding-right: 3rem;
   padding-top: 16px;
-  
 }
 .navigation__list {
   display: flex;
@@ -142,7 +141,6 @@ body {
   flex-direction: row-reverse;
   align-items: center;
   gap: 0.85rem;
-
 }
 .button {
   display: inline-flex;
@@ -206,26 +204,25 @@ body {
 .button--primary:hover span {
   color: var(--clr-primary-500);
 }
-.button--secondary{
+.button--secondary {
   background: transparent;
-    border-color: var(--clr-secondary-500);
-    color: var(--clr-secondary-500);
+  border-color: var(--clr-secondary-500);
+  color: var(--clr-secondary-500);
 }
-.button--secondary:hover{
+.button--secondary:hover {
   background: var(--clr-secondary-500);
 }
 .button--secondary:hover i,
-.button--secondary:hover span{
+.button--secondary:hover span {
   color: var(--clr-white);
 }
 .header-divider {
-  
-    width: calc(100% - (var(--container-padding) * 2));
-    margin-inline: auto;
+  width: calc(100% - (var(--container-padding) * 2));
+  margin-inline: auto;
 
-    height: 2px;
-    border: none;
-    background-color: #EFE5D2;
+  height: 2px;
+  border: none;
+  background-color: #efe5d2;
 }
 /* ==========================================
                 HERO
@@ -341,7 +338,7 @@ body {
 /* ---------- Image ---------- */
 
 .hero__image {
-  flex:  1 32rem;
+  flex: 1 32rem;
   max-width: 32rem;
 }
 
@@ -391,12 +388,12 @@ body {
 
 .section-header {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-12);
-    font-size: 1.4rem;
-    padding-top: var(--space-24);
-    padding-bottom: var(--space-24);
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  font-size: 1.4rem;
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
 }
 
 .section-header__line {
@@ -451,8 +448,8 @@ body {
 }
 
 .purpose-grid {
-   display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-40);
 }
 .purpose-card {
@@ -627,7 +624,7 @@ body {
   display: flex;
   gap: 1.5rem;
   will-change: transform;
-  transition: transform .45s ease;
+  transition: transform 0.45s ease;
 }
 
 /* ========================================
@@ -800,9 +797,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-.therapy-card-online{
- display: flex;
- flex-direction: row;
+.therapy-card-online {
+  display: flex;
+  flex-direction: row;
   margin-inline: auto;
   gap: 2rem;
   width: 100%;
@@ -810,29 +807,28 @@ body {
   border-radius: var(--radius-xl);
   padding-inline: var(--container-padding);
 }
-.therapy-card_online{
-  display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    padding: 1rem 2rem;
-    border: 1px solid var(--clr-secondary-300);
-    border-radius: var(--radius-xl);
-    background: var(--clr-white);
-    box-shadow: var(--shadow-sm);
-    cursor: pointer;
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease,
-      border-color 0.35s ease;
-}
-
-.therapy-card__content_online{
+.therapy-card_online {
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  border: 1px solid var(--clr-secondary-300);
+  border-radius: var(--radius-xl);
+  background: var(--clr-white);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
+.therapy-card__content_online {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
 
 /* ========================================
             LARGE THERAPY CARDS
@@ -853,12 +849,16 @@ body {
   height: auto;
   padding: 1rem 1.5rem;
 }
-
+.therapy-card-big .session-card {
+  font-size: 1rem;
+}
+.session-card__content {
+  font-size: 1rem;
+}
 .therapy-card-big .therapy-card__content {
   flex: 1;
   gap: 0.6rem;
   font-size: 1.4rem;
-  
 }
 
 .therapy-card-big .therapy-card__description {
@@ -869,15 +869,19 @@ body {
 .therapy-card-big .therapy-card__footer {
   margin-top: 0;
 }
-.therapy-card__intro{
+.therapy-card__intro {
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
-
 }
-body > main > section.therapy-card-big > article:nth-child(4) > section > ul > li{
+body
+  > main
+  > section.therapy-card-big
+  > article:nth-child(4)
+  > section
+  > ul
+  > li {
   line-height: 1.4;
-  
 }
 /* ========================================
             THERAPY HEADER
@@ -937,9 +941,9 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   object-fit: cover;
   transition: transform 0.35s ease;
   transition: transform 0.4s ease;
-  border-radius: 1rem
+  border-radius: 1rem;
 }
-.title-short{
+.title-short {
   display: none;
 }
 /* ========================================
@@ -970,7 +974,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   padding-left: 1.25rem;
   color: var(--clr-text-primary);
 }
-.therapy-card__footer_btns{
+.therapy-card__footer_btns {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1005,11 +1009,11 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   font-weight: var(--fw-semibold);
   text-align: center;
 }
-.therapy-card__footer p{
+.therapy-card__footer p {
   display: flex;
   justify-content: center;
 }
-.therapy-card__description_info{
+.therapy-card__description_info {
   padding: 0.5rem;
   display: block;
   align-self: center;
@@ -1026,27 +1030,26 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   border-radius: 0.75rem;
   /* cursor: pointer; */
   border: 1px solid var(--clr-secondary-300);
-    background-color: transparent;
-    transition:
-      border-color 0.25s ease,
-      box-shadow 0.25s ease;
+  background-color: transparent;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .session-card input[type="radio"] {
   display: none;
 }
-.session-card_has{
+.session-card_has {
   cursor: pointer;
   padding: 0.5rem;
-    border: 2px solid gray;
-    border-radius: 0.75rem;
-    border: 1px solid var(--clr-secondary-300);
-      background-color: transparent;
-      transition:
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-
+  border: 2px solid gray;
+  border-radius: 0.75rem;
+  border: 1px solid var(--clr-secondary-300);
+  background-color: transparent;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
-.session-card_has input[type="radio"]{
+.session-card_has input[type="radio"] {
   display: visible;
 }
 .session-card:has(input:checked) {
@@ -1054,7 +1057,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   background-color: transparent;
   box-shadow: 0 0 0 2px rgba(111, 168, 117, 0.18);
 }
-
 
 .therapy-card__footer {
   margin-top: var(--space-12);
@@ -1065,9 +1067,16 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   justify-content: center;
   width: 100%;
 }
-.therapy-card__image,
-.therapy-card__image_online {
+.therapy-card__image {
+  height: 240px;
   overflow: hidden;
+}
+
+.therapy-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .therapy-card__image img,
@@ -1084,59 +1093,34 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
    THERAPY CARD
 ======================================== */
 
-.therapy-card {
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.therapy-card__image img {
-  transition: transform 0.4s ease;
-}
-
-.therapy-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--clr-primary-300);
-  box-shadow: var(--shadow-lg);
-}
-
-.therapy-card:hover .therapy-card__image img {
-  transform: scale(1.04);
-}
-
-.therapy-card:hover .therapy-card__title {
-  color: var(--clr-primary-600);
-}
-
-
 /* ========================================
-   ONLINE THERAPY CARD
+   CARD HOVER
 ======================================== */
 
+.therapy-card,
 .therapy-card_online {
   transition:
     transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.therapy-card__image_online{
-  border-radius: 1rem;
-}
-.therapy-card__image_online img {
-  transition: transform 0.4s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
+.therapy-card:hover,
 .therapy-card_online:hover {
   transform: translateY(-6px);
   border-color: var(--clr-primary-300);
   box-shadow: var(--shadow-lg);
 }
+.therapy-card__image img,
+.therapy-card__image_online img {
+  transition: transform 0.4s ease;
+}
 
+.therapy-card:hover .therapy-card__image img,
 .therapy-card_online:hover .therapy-card__image_online img {
   transform: scale(1.04);
 }
-
+.therapy-card:hover .therapy-card__title,
 .therapy-card_online:hover .therapy-card__title {
   color: var(--clr-primary-600);
 }
@@ -1240,7 +1224,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   list-style: none;
   padding: 0;
 }
-.programme-description{
+.programme-description {
   font-size: 24px;
 }
 .programme-list li {
@@ -1271,10 +1255,10 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   max-width: var(--container-width);
   margin: auto;
 }
-.rasayana-content p{
+.rasayana-content p {
   font-size: 1.4rem;
 }
-.rasayana-content .primay-color{
+.rasayana-content .primay-color {
   color: var(--clr-primary-400);
   font-weight: var(--fw-semibold);
 }
@@ -1311,31 +1295,30 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   display: flex;
   gap: 10px;
 }
-.contact-trigger{
+.contact-trigger {
   display: flex;
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
   align-self: flex-end;
-    border: none;
-    align-items: center;
-    /* gap: 12px; */
-    background: transparent;
-    font-family: var(--font-ui);
-    font-size: 1rem;
-    font-weight: var(--fw-semibold);
-    color: #98C36D;;
-    cursor: pointer;
-    margin-left: auto;
-    transition: color 0.3s ease;
-    gap: var(--space-12);
-    padding-top: 24px;
-  }
-  
-  .contact-trigger {
-    padding-left: 12px;
-  }
- 
-  .contact_me:hover {
-    color: var(--clr-secondary-700);
+  border: none;
+  align-items: center;
+  /* gap: 12px; */
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-secondary-500);
+  cursor: pointer;
+  margin-left: auto;
+  transition: color 0.3s ease;
+  gap: var(--space-12);
+  padding-top: 24px;
+   padding-left: 12px;
+}
+
+
+
+.contact-trigger:hover {
+  color: var(--clr-secondary-700);
 }
 
 .retreat-locations {
@@ -1371,7 +1354,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 }
 
 .location i {
-  color: #97C36D;
+  color: #97c36d;
   font-size: 1.1rem;
 }
 
@@ -1381,7 +1364,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   text-align: center;
   padding: 0 20px;
 }
-.training-section p{
+.training-section p {
   font-size: 1.4rem;
 }
 .section-header-training {
@@ -1401,7 +1384,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   margin: 0;
 }
 
-.section-header-training p{
+.section-header-training p {
   font-size: 1.4rem;
   max-width: 700px;
   margin: 0 auto;
@@ -1435,7 +1418,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
 .upcoming-retreats {
   max-width: 1200px;
-    margin: 2rem auto;
+  margin: 2rem auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1456,14 +1439,14 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   gap: 0.5rem;
   margin: 2rem 0;
 }
-.retreat-content h2{
+.retreat-content h2 {
   font-size: 2rem;
 }
-.retreat-content p{
+.retreat-content p {
   font-size: 1.2rem;
   line-height: 28px;
 }
-.retreat-content span{
+.retreat-content span {
   font-size: 1.2rem;
 }
 .retreat-info div {
@@ -1473,172 +1456,131 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 }
 
 .guidance {
-
   margin: 40px;
   padding: 0 20px;
-
 }
 
 .section-title {
-
   text-align: center;
   margin-bottom: 60px;
-
 }
 
 .section-title h2 {
-
   margin-bottom: 20px;
-
 }
 
 .section-title p {
-
   max-width: 700px;
   margin: auto;
   line-height: 1.8;
-
 }
 
 .guidance-grid {
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-
 }
 
 .guidance-card {
-
-  background: #F8F5EE;
+  background: #f8f5ee;
   border-radius: 24px;
   padding: 35px;
   display: flex;
   flex-direction: column;
-  transition: .3s ease;
-  
+  transition: 0.3s ease;
 }
-.guidance-card, .card-header h3{
-    font-size: 18px;
-  }
+.guidance-card,
+.card-header h3 {
+  font-size: 18px;
+}
 .guidance-card:hover {
-
   transform: translateY(-6px);
-
 }
 
 .card-header {
-
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   margin-bottom: 14px;
-
 }
 
 .card-header h3 {
-
   margin-bottom: 10px;
-
 }
 
 .duration {
-
   display: flex;
   align-items: center;
   gap: 10px;
 
-  color: #88B36A;
+  color: #88b36a;
   font-weight: 600;
-
 }
 
 .card-section {
-
   margin-bottom: 28px;
-
 }
 
 .card-section h4 {
-
   margin-bottom: 12px;
   color: #444;
-
 }
 
 .card-section p {
-
   line-height: 1.7;
-
 }
 
 .card-section ul {
-
   list-style: none;
   padding: 0;
-
 }
 
 .card-section li {
-
   position: relative;
   padding-left: 24px;
   margin-bottom: 12px;
   line-height: 1.6;
-
 }
 
 .card-section li::before {
-
   content: "✓";
 
   position: absolute;
   left: 0;
 
-  color: #88B36A;
+  color: #88b36a;
   font-weight: bold;
-
 }
 
 .investment {
-
   margin-top: auto;
 
   padding-top: 25px;
   border-top: 1px solid #ddd;
-
 }
 .investment h4 {
-
   margin-bottom: 15px;
-
 }
 
 .investment strong {
-
   display: block;
   margin-bottom: 10px;
 
-  color: #4F6B3D;
-
+  color: #4f6b3d;
 }
 
 .investment small {
-
   display: block;
   margin-top: 18px;
 
   line-height: 1.6;
   color: #777;
-
 }
-.invest-hiden{
+.invest-hiden {
   visibility: hidden;
 }
 .guidance-card .contact_me {
-
   margin-top: 30px;
   justify-content: center;
-
 }
 /* ========================================
             TESTIMONIALS!!!
@@ -1692,7 +1634,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
 .testimonials {
   padding-block: var(--space-40);
-  
 }
 
 .testimonials__background {
@@ -1732,7 +1673,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 .testimonial-track {
   position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   min-height: 1rem;
 }
@@ -1836,7 +1776,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   padding: 14px;
 }
 .testimonial-pagination__dot {
-
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -1844,19 +1783,16 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   background: #cfcfcf;
   cursor: pointer;
   transition: 0.3s;
-
 }
 .testimonial-pagination__dot.active {
   background: var(--clr-primary-500);
 }
 .testimonial-card__author {
-
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
   margin-left: auto;
-
 }
 .testimonial-card__avatar {
   align-self: flex-end;
@@ -1867,13 +1803,11 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 }
 
 .testimonial-card__name {
-
   font-style: normal;
   font-size: 1.125rem;
   font-weight: 600;
- color: var(--clr-primary-950);
+  color: var(--clr-primary-950);
   text-align: center;
-
 }
 /* ========================================
                 FOOTER
@@ -1889,7 +1823,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 ======================================== */
 
 .footer__content {
-
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: var(--space-40);
@@ -2018,13 +1951,13 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
 .footer__divider {
   width: 100%;
-  
-    margin-inline: auto;
-    padding-inline: 2rem;
-  
-    height: 2px;
-    background: var(--clr-accent-300);
-    margin-block: var(--space-32);
+
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  height: 2px;
+  background: var(--clr-accent-300);
+  margin-block: var(--space-32);
 }
 /* ========== BOOKING MODAL ========== */
 
@@ -2333,10 +2266,10 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   border: 0;
   border-radius: 18px;
 
-  background: #7EAFC0;
+  background: #7eafc0;
   cursor: pointer;
 
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .header__menu-toggle span {
@@ -2346,7 +2279,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   background: #fff;
   border-radius: 999px;
 
-  transition: all .59s ease-out;
+  transition: all 0.59s ease-out;
 }
 .header__menu-toggle.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
@@ -2361,63 +2294,63 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 }
 
 .contact-modal {
-    position: fixed;
-    inset: 0;
+  position: fixed;
+  inset: 0;
 
-    display: none;
+  display: none;
 
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .contact-modal--is-open {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-modal__overlay {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 2rem;
+  padding: 2rem;
 
-    background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .contact-modal__content {
-    position: relative;
+  position: relative;
 
-    width: min(100%, 600px);
-    max-height: 90vh;
+  width: min(100%, 600px);
+  max-height: 90vh;
 
-    overflow-y: auto;
+  overflow-y: auto;
 
-    padding: 3rem;
+  padding: 3rem;
 
-    background: white;
-    border-radius: 1rem;
+  background: white;
+  border-radius: 1rem;
 
-    box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg);
 }
 
 .contact-modal__close {
-    position: absolute;
+  position: absolute;
 
-    top: 1rem;
-    right: 1rem;
+  top: 1rem;
+  right: 1rem;
 
-    width: 2.5rem;
-    height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 
-    font-size: 2rem;
-    cursor: pointer;
+  font-size: 2rem;
+  cursor: pointer;
 }
 /* ========================================
    CONTACT MODAL
@@ -2435,7 +2368,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 .contact-modal--is-open {
   display: flex;
 }
-
 
 /* ========================================
    OVERLAY
@@ -2456,7 +2388,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   backdrop-filter: blur(4px);
 }
 
-
 /* ========================================
    MODAL CONTENT
 ======================================== */
@@ -2471,7 +2402,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
   padding: 3rem;
 
- 
   border: 1px solid var(--clr-primary-100);
   border-radius: 1.25rem;
 
@@ -2480,9 +2410,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   animation: contactModalIn 0.3s ease;
 }
 
-
 @keyframes contactModalIn {
-
   from {
     opacity: 0;
     transform: translateY(15px) scale(0.98);
@@ -2492,9 +2420,7 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-
 }
-
 
 /* ========================================
    CLOSE BUTTON
@@ -2531,14 +2457,12 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
     transform 0.25s ease;
 }
 
-
 .contact-modal__close:hover {
   background: var(--clr-primary-100);
   color: var(--clr-primary-600);
 
   transform: rotate(90deg);
 }
-
 
 /* ========================================
    HEADER
@@ -2557,7 +2481,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   text-transform: uppercase;
 }
 
-
 .contact-modal__content h2 {
   margin-bottom: 0.75rem;
 
@@ -2567,7 +2490,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   line-height: 1.2;
 }
 
-
 .contact-modal__content .contact-description {
   margin-bottom: 2rem;
 
@@ -2576,7 +2498,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   font-size: 1rem;
   line-height: 1.6;
 }
-
 
 /* ========================================
    FORM
@@ -2589,7 +2510,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   gap: 1.25rem;
 }
 
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -2597,14 +2517,12 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   gap: 0.5rem;
 }
 
-
 .form-group label {
   color: var(--clr-primary-950);
 
   font-size: 0.95rem;
   font-weight: 600;
 }
-
 
 /* ========================================
    INPUTS
@@ -2634,7 +2552,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
     background 0.25s ease;
 }
 
-
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--clr-primary-400);
@@ -2649,15 +2566,12 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
 .form-group input:focus,
 .form-group textarea:focus {
-
   border-color: var(--clr-primary-500);
 
-  box-shadow:
-    0 0 0 3px rgba(122, 180, 100, 0.15);
+  box-shadow: 0 0 0 3px rgba(122, 180, 100, 0.15);
 
   background: var(--clr-neutral-50);
 }
-
 
 /* ========================================
    SELECTED SERVICE
@@ -2673,7 +2587,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   cursor: default;
 }
 
-
 /* ========================================
    TEXTAREA
 ======================================== */
@@ -2682,7 +2595,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   min-height: 140px;
   resize: vertical;
 }
-
 
 /* ========================================
    SEND BUTTON
@@ -2714,7 +2626,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
     box-shadow 0.25s ease;
 }
 
-
 #contact-form .btn-primary:hover {
   background: var(--clr-primary-600);
 
@@ -2722,7 +2633,6 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
 
   box-shadow: var(--shadow-md);
 }
-
 
 /* ========================================
    FORM STATUS
@@ -2736,13 +2646,11 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   font-size: 0.9rem;
 }
 
-
 /* ========================================
    MOBILE
 ======================================== */
 
 @media (max-width: 600px) {
-
   .contact-modal__overlay {
     padding: 1rem;
   }
@@ -2756,5 +2664,4 @@ body > main > section.therapy-card-big > article:nth-child(4) > section > ul > l
   .contact-modal__content h2 {
     font-size: 1.7rem;
   }
-
 }

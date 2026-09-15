@@ -179,7 +179,7 @@
   .booking-modal__container {
     max-height: none;
   }
-
+  
   .booking-modal__header {
     padding: 30px 24px 24px;
   }
@@ -240,7 +240,26 @@
 
   }
   .therapy-card{
-    height: 700px;
+    height: auto;
+
+  }
+  .therapy-card__image_online{
+    height: auto;
+  }
+  .therapy-card__image_online img {
+    height: auto;
+  }
+  .therapy-card-big{
+    height: auto;
+  }
+  .therapy-card-big img{
+    height: auto;
+  }
+  .therapy-card__image{
+    height: auto;
+  }
+  .therapy-card__image img {
+    height: auto;
   }
  body > main > section.therapy-card-big > article:nth-child(1){
     width: 100%;
@@ -251,6 +270,8 @@
     max-width: var(--container-width);
 }
   .therapy-card-online {
+    max-width: var(--container-width);
+    padding-inline: var(--container-padding);
     display: flex;
     flex-direction: column;
   }
@@ -662,6 +683,10 @@
   .therapy-grid-TCM {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .therapy-card__footer_btns{
+    display: flex;
+    flex-direction: column;
   }
   .retreats__text p {
     font-size: 1.4rem;
