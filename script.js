@@ -10,6 +10,32 @@ bookingDateTimeInputs.forEach((input) => {
   });
 });
 
+const heroDescription = document.querySelector("#heroDescription");
+const readMoreBtn = document.querySelector("#readMoreBtn");
+const readMoreIcon = readMoreBtn.querySelector("i");
+
+readMoreBtn.addEventListener("click", () => {
+  const isExpanded = heroDescription.classList.contains("expanded");
+
+  if (isExpanded) {
+    heroDescription.classList.remove("expanded");
+    heroDescription.classList.add("collapsed");
+
+    readMoreBtn.firstChild.textContent = "Read more ";
+
+    readMoreIcon.classList.remove("fa-arrow-up");
+    readMoreIcon.classList.add("fa-arrow-down");
+  } else {
+    heroDescription.classList.remove("collapsed");
+    heroDescription.classList.add("expanded");
+
+    readMoreBtn.firstChild.textContent = "Read less ";
+
+    readMoreIcon.classList.remove("fa-arrow-down");
+    readMoreIcon.classList.add("fa-arrow-up");
+  }
+});
+
 const menuBtn = document.querySelector(".header__menu-toggle");
 const nav = document.querySelector(".navigation");
 
@@ -21,281 +47,172 @@ menuBtn.addEventListener("click", () => {
 const bookingModal = document.querySelector(".booking-modal");
 
 const bookingTriggers = document.querySelectorAll(
-  ".booking-modal__trigger, .online-booking__trigger"
+  ".booking-modal__trigger, .online-booking__trigger",
 );
 
-const bookingCancel = document.querySelector(
-  ".booking-modal__cancel"
-);
+const bookingCancel = document.querySelector(".booking-modal__cancel");
 
-const modalSessionName = document.querySelector(
-  ".booking-modal__session-name"
-);
+const modalSessionName = document.querySelector(".booking-modal__session-name");
 
 const modalSessionDescription = document.querySelector(
-  ".booking-modal__session-description"
+  ".booking-modal__session-description",
 );
 
 const modalSessionDuration = document.querySelector(
-  ".booking-modal__session-duration"
+  ".booking-modal__session-duration",
 );
 
 const modalSessionPrice = document.querySelector(
-  ".booking-modal__session-price"
+  ".booking-modal__session-price",
 );
 
-const modalImage = document.querySelector(
-  ".booking-modal__image"
-);
+const modalImage = document.querySelector(".booking-modal__image");
 
-const bookingModalTitle = document.querySelector(
-  ".booking-modal__title"
-);
+const bookingModalTitle = document.querySelector(".booking-modal__title");
 
-const bookingSubmitText = document.querySelector(
-  "#booking-submit-text"
-);
-const bookingSubmitButton = document.querySelector(
-  "#booking-submit-button"
-);
-const bookingSubmitIcon = document.querySelector(
-  "#booking-submit-icon"
-);
-
+const bookingSubmitText = document.querySelector("#booking-submit-text");
+const bookingSubmitButton = document.querySelector("#booking-submit-button");
+const bookingSubmitIcon = document.querySelector("#booking-submit-icon");
 
 // ========================================
 // OPEN BOOKING MODAL
 // ========================================
 
 bookingTriggers.forEach((trigger) => {
-
   trigger.addEventListener("click", () => {
-
-    const card = trigger.closest(
-      ".therapy-card, .therapy-card_online"
-    );
+    const card = trigger.closest(".therapy-card, .therapy-card_online");
 
     if (!card) return;
-
 
     // ========================================
     // CHECK IF ONLINE
     // ========================================
 
-    const isOnline = trigger.classList.contains(
-      "online-booking__trigger"
-    );
-
+    const isOnline = trigger.classList.contains("online-booking__trigger");
 
     // ========================================
     // MODAL TITLE
     // ========================================
 
     if (isOnline) {
-
-  bookingSubmitText.textContent =
-    "Book Online Session";
-
-} else {
-
-  bookingSubmitText.textContent =
-    "Book This Session";
-
-}
-
+      bookingSubmitText.textContent = "Book Online Session";
+    } else {
+      bookingSubmitText.textContent = "Book This Session";
+    }
 
     // ========================================
     // SUBMIT BUTTON TEXT
     // ========================================
-if (isOnline) {
+    if (isOnline) {
+      bookingSubmitText.textContent = "Book Online Session";
 
-  bookingSubmitText.textContent =
-    "Book Online Session";
+      bookingSubmitIcon.className = "fa-solid fa-video";
 
-  bookingSubmitIcon.className =
-    "fa-solid fa-video";
+      bookingSubmitButton.classList.remove("button--primary");
 
-  bookingSubmitButton.classList.remove(
-    "button--primary"
-  );
+      bookingSubmitButton.classList.add("button--online");
+    } else {
+      bookingSubmitText.textContent = "Book This Session";
 
-  bookingSubmitButton.classList.add(
-    "button--online"
-  );
+      bookingSubmitIcon.className = "fa-regular fa-calendar-days";
 
-} else {
+      bookingSubmitButton.classList.remove("button--online");
 
-  bookingSubmitText.textContent =
-    "Book This Session";
-
-  bookingSubmitIcon.className =
-    "fa-regular fa-calendar-days";
-
-  bookingSubmitButton.classList.remove(
-    "button--online"
-  );
-
-  bookingSubmitButton.classList.add(
-    "button--primary"
-  );
-
-}
-
+      bookingSubmitButton.classList.add("button--primary");
+    }
 
     // ========================================
     // THERAPY NAME
     // ========================================
 
-    const sessionName =
-      card
-        .querySelector(".therapy-card__title")
-        ?.textContent
-        .trim();
-
+    const sessionName = card
+      .querySelector(".therapy-card__title")
+      ?.textContent.trim();
 
     if (sessionName) {
-
-      modalSessionName.textContent =
-        sessionName;
+      modalSessionName.textContent = sessionName;
     }
-
 
     // ========================================
     // THERAPY DESCRIPTION
     // ========================================
 
-    const sessionDescription =
-      card
-        .querySelector(".therapy-card__subtitle")
-        ?.textContent
-        .trim()
-        .replace(/^\(|\)$/g, "");
-
+    const sessionDescription = card
+      .querySelector(".therapy-card__subtitle")
+      ?.textContent.trim()
+      .replace(/^\(|\)$/g, "");
 
     if (sessionDescription) {
-
-      modalSessionDescription.textContent =
-        sessionDescription;
+      modalSessionDescription.textContent = sessionDescription;
     }
-
 
     // ========================================
     // SESSION / PRICE / DURATION
     // ========================================
 
-    const selectedInput =
-      card.querySelector(
-        ".session-card input:checked"
-      );
-
+    const selectedInput = card.querySelector(".session-card input:checked");
 
     const sessionCard = selectedInput
       ? selectedInput.closest(".session-card")
       : card.querySelector(".session-card");
 
-
     if (sessionCard) {
+      const duration = sessionCard
+        .querySelector(".session-card__duration")
+        ?.textContent.trim();
 
-      const duration =
-        sessionCard
-          .querySelector(
-            ".session-card__duration"
-          )
-          ?.textContent
-          .trim();
-
-
-      const price =
-        sessionCard
-          .querySelector(
-            ".session-card__price"
-          )
-          ?.textContent
-          .trim();
-
+      const price = sessionCard
+        .querySelector(".session-card__price")
+        ?.textContent.trim();
 
       if (duration) {
-
-        modalSessionDuration.textContent =
-          duration;
+        modalSessionDuration.textContent = duration;
       }
-
 
       if (price) {
-
-        modalSessionPrice.textContent =
-          price;
+        modalSessionPrice.textContent = price;
       }
     }
-
 
     // ========================================
     // IMAGE
     // ========================================
 
-    const cardImage =
-      card.querySelector(
-        ".therapy-card__image img, .therapy-card__image_online img"
-      );
-
+    const cardImage = card.querySelector(
+      ".therapy-card__image img, .therapy-card__image_online img",
+    );
 
     if (cardImage && modalImage) {
+      modalImage.src = cardImage.src;
 
-      modalImage.src =
-        cardImage.src;
-
-      modalImage.alt =
-        cardImage.alt || sessionName;
+      modalImage.alt = cardImage.alt || sessionName;
     }
-
 
     // ========================================
     // OPEN MODAL
     // ========================================
 
-    bookingModal.classList.add(
-      "booking-modal--is-open"
-    );
-
+    bookingModal.classList.add("booking-modal--is-open");
   });
-
 });
-
 
 // ========================================
 // CLOSE MODAL
 // ========================================
 
-bookingCancel.addEventListener(
-  "click",
-  () => {
-
-    bookingModal.classList.remove(
-      "booking-modal--is-open"
-    );
-
-  }
-);
-
+bookingCancel.addEventListener("click", () => {
+  bookingModal.classList.remove("booking-modal--is-open");
+});
 
 // ========================================
 // ESCAPE
 // ========================================
 
-document.addEventListener(
-  "keydown",
-  (event) => {
-
-    if (event.key === "Escape") {
-
-      bookingModal.classList.remove(
-        "booking-modal--is-open"
-      );
-
-    }
-
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    bookingModal.classList.remove("booking-modal--is-open");
   }
-);
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const journeySlider = document.querySelector(".journey__slider");
@@ -404,7 +321,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", function (e) {
     const target = document.querySelector(this.getAttribute("href"));
-
     if (!target) return;
 
     e.preventDefault();

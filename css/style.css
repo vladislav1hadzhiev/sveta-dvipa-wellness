@@ -768,7 +768,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 26rem;
-  height: 39rem;
+  height: auto;
   padding: 1rem 2rem;
   border: 1px solid var(--clr-secondary-300);
   border-radius: var(--radius-xl);
@@ -801,13 +801,14 @@ body {
   gap: 1.5rem;
 }
 .therapy-card-online{
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
+ display: flex;
+ flex-direction: row;
   margin-inline: auto;
   gap: 2rem;
   width: 100%;
   max-width: var(--container-width);
   border-radius: var(--radius-xl);
+  padding-inline: var(--container-padding);
 }
 .therapy-card_online{
   display: flex;
