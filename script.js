@@ -1,3 +1,5 @@
+
+
 const bookingDateTimeInputs = document.querySelectorAll(
   'input[type="date"], input[type="time"]',
 );
@@ -356,7 +358,49 @@ contactTriggers.forEach((trigger) => {
     contactModal.classList.add("contact-modal--is-open");
   });
 });
+/* ========================================
+   EMAILJS
+======================================== */
 
+emailjs.init({
+   publicKey: "C9lKxIcMlLcPw7Qyq"
+});
+
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  formStatus.textContent = "Sending...";
+  formStatus.className = "form-status";
+
+  emailjs.sendForm(
+  "service_m7bwscr",
+  "template_h2im7vx",
+  contactForm
+)
+  .then(() => {
+
+    formStatus.textContent =
+      "Your message has been sent successfully.";
+
+    formStatus.classList.add("success");
+
+    contactForm.reset();
+
+  })
+  .catch((error) => {
+  console.error("EmailJS error:", error);
+  console.error("Status:", error.status);
+  console.error("Text:", error.text);
+
+  formStatus.textContent =
+    "Something went wrong. Please try again.";
+
+  formStatus.classList.add("error");
+});
+});
 /* ========================================
    CLOSE CONTACT MODAL
 ======================================== */
@@ -373,4 +417,25 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     contactModal.classList.remove("contact-modal--is-open");
   }
+});
+document.querySelectorAll(".session-card_").forEach((card) => {
+
+  const radio = card.querySelector('input[type="radio"]');
+
+  radio.addEventListener("change", () => {
+
+    const options = card.closest(".therapy-card__options");
+
+    options
+      .querySelectorAll(".session-card")
+      .forEach((item) => {
+        item.classList.remove("session-card--selected");
+      });
+
+    if (radio.checked) {
+      card.classList.add("session-card--selected");
+    }
+
+  });
+
 });

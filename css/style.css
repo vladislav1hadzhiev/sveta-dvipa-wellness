@@ -306,6 +306,7 @@ body {
 
 .hero__description.expanded {
   display: block;
+  overflow: visible;
 }
 .hero__description p {
   font-size: 1.4rem;
@@ -316,6 +317,7 @@ body {
 
 .hero__read-more {
   align-self: flex-end;
+  display: none;
   border: none;
   align-items: center;
   gap: 12px;
@@ -647,7 +649,7 @@ body {
 /* ========================================
             IMAGE
 ======================================== */
-
+.journey-card video,
 .journey-card__image {
   width: 100%;
   height: 100%;
@@ -785,18 +787,19 @@ body {
 .therapy-grid-TCM {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: space-evenly;
   gap: 1rem;
   width: 100%;
+   margin: 1.5rem auto 0;
   max-width: var(--container-width);
   margin-inline: auto;
   padding-inline: var(--container-padding);
 }
-.therapy-grid-tcm {
+/* .therapy-grid-tcm {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-}
+} */
 .therapy-card-online {
   display: flex;
   flex-direction: row;
@@ -835,12 +838,13 @@ body {
 ======================================== */
 
 .therapy-card-big {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+ display: flex;
+ flex-direction: row;
   gap: 1.5rem;
   width: 100%;
   max-width: var(--container-width);
   margin: 1.5rem auto 0;
+   margin-inline: auto;
   padding-inline: var(--container-padding);
 }
 
@@ -853,6 +857,7 @@ body {
   font-size: 1rem;
 }
 .session-card__content {
+  display: contents;
   font-size: 1rem;
 }
 .therapy-card-big .therapy-card__content {
@@ -1023,40 +1028,46 @@ body
   justify-content: center;
   gap: var(--space-12);
 }
-
-.session-card {
-  padding: 0.5rem;
-  border: 2px solid gray;
-  border-radius: 0.75rem;
-  /* cursor: pointer; */
-  border: 1px solid var(--clr-secondary-300);
-  background-color: transparent;
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
+.therapy-card_online ,.therapy-card__options{
+  display: flex;
+  justify-content: center;
+  gap: var(--space-12);
 }
 .session-card input[type="radio"] {
   display: none;
 }
-.session-card_has {
-  cursor: pointer;
+
+.session-card_has input[type="radio"] {
+  display: inline-block;
+}
+.session-card {
   padding: 0.5rem;
-  border: 2px solid gray;
-  border-radius: 0.75rem;
   border: 1px solid var(--clr-secondary-300);
+  border-radius: 0.75rem;
   background-color: transparent;
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
-.session-card_has input[type="radio"] {
-  display: visible;
+
+.session-card input[type="radio"] {
+  display: none;
 }
+
+.session-card_has {
+  cursor: pointer;
+}
+
+.session-card_has input[type="radio"] {
+  display: inline-block;
+}
+
 .session-card:has(input:checked) {
   border-color: var(--clr-secondary-500);
   background-color: transparent;
   box-shadow: 0 0 0 2px rgba(111, 168, 117, 0.18);
 }
+
 
 .therapy-card__footer {
   margin-top: var(--space-12);
@@ -1096,7 +1107,7 @@ body
 /* ========================================
    CARD HOVER
 ======================================== */
-
+.therapy-card-big,
 .therapy-card,
 .therapy-card_online {
   transition:
@@ -1104,7 +1115,7 @@ body
     box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
-
+.therapy-card-big,
 .therapy-card:hover,
 .therapy-card_online:hover {
   transform: translateY(-6px);
@@ -1143,6 +1154,11 @@ body
   padding-inline: var(--container-padding);
 
   overflow: hidden;
+}
+.online-booking__trigger,
+.booking-modal__trigger{
+  width: 100%;
+  justify-content: center;
 }
 .retreats_container {
   position: relative;
@@ -2664,4 +2680,17 @@ body
   .contact-modal__content h2 {
     font-size: 1.7rem;
   }
+}
+.session-card {
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.session-card--selected {
+  border-color: var(--clr-primary-600);
+  background-color: rgba(112, 174, 190, 0.12);
+  box-shadow: 0 0 0 2px var(--clr-primary-600);
 }

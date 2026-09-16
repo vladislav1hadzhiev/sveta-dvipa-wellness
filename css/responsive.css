@@ -1,3 +1,10 @@
+@media (max-width: 1587px) {
+  .hero__read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1400px) {
   .main {
@@ -706,8 +713,9 @@
     position: relative;
   }
   .rasayana-background {
-    font-size: 6rem;
+    font-size: 5rem;
     position: absolute;
+    top: 40px;
   }
   .rasayana-content h2 {
     padding-bottom: 24px;
@@ -822,6 +830,11 @@
     width: 100%;
     padding-top: 12px;
   }
+  .rasayana-background {
+    font-size: 4rem;
+    position: absolute;
+    top: 40px;
+  }
   .therapy-card__image{
     height: auto;
   }
@@ -901,7 +914,11 @@
   .title-full {
     display: none;
   }
-
+  .rasayana-background {
+    font-size: 3.8rem;
+    position: absolute;
+    top: -12px;
+  }
   .title-short {
     display: inline;
   }
