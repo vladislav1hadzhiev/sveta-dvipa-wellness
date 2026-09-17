@@ -376,10 +376,10 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.className = "form-status";
 
   emailjs.sendForm(
-    "service_ezhob2u",
-    "template_t0s1jyi",
-    contactForm
-  )
+  "service_ezhob2u",
+  "template_t0s1jyi",
+  contactForm
+)
   .then(() => {
     formStatus.textContent =
       "Your message has been sent successfully.";
