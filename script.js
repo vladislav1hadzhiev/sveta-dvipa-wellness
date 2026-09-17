@@ -376,7 +376,7 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.className = "form-status";
 
   emailjs.sendForm(
-  "service_m7bwscr",
+  "service_bj1iwac",
   "template_h2im7vx",
   contactForm
 )

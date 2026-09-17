@@ -436,7 +436,7 @@ body {
 }
 .practices__description {
   padding-top: 12px;
-  width: 68%;
+  max-width: 50%;
   margin: 0 auto;
   /* padding-top: 24px; */
   text-align: center;
@@ -845,7 +845,8 @@ body {
   max-width: var(--container-width);
   margin: 1.5rem auto 0;
    margin-inline: auto;
-  padding-inline: var(--container-padding);
+  /* padding-inline: var(--container-padding); */
+  padding-inline: 3.2rem;
 }
 
 .therapy-card-big .therapy-card {
@@ -1107,7 +1108,7 @@ body
 /* ========================================
    CARD HOVER
 ======================================== */
-.therapy-card-big,
+
 .therapy-card,
 .therapy-card_online {
   transition:
@@ -1115,9 +1116,14 @@ body
     box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
-.therapy-card-big,
+
 .therapy-card:hover,
 .therapy-card_online:hover {
+  transform: translateY(-6px);
+  border-color: var(--clr-primary-300);
+  box-shadow: var(--shadow-lg);
+}
+.therapy-grid-TCM .therapy-card:hover{
   transform: translateY(-6px);
   border-color: var(--clr-primary-300);
   box-shadow: var(--shadow-lg);
@@ -1127,12 +1133,13 @@ body
   transition: transform 0.4s ease;
 }
 
-.therapy-card:hover .therapy-card__image img,
-.therapy-card_online:hover .therapy-card__image_online img {
+.therapy-card:hover .therapy-card__image img {
   transform: scale(1.04);
 }
-.therapy-card:hover .therapy-card__title,
-.therapy-card_online:hover .therapy-card__title {
+.therapy-card_online:hover .therapy-card__image_online img{
+  transform: scale(1.02);
+}
+.therapy-card:hover .therapy-card__title {
   color: var(--clr-primary-600);
 }
 .retreats {
@@ -1174,7 +1181,7 @@ body
   flex-direction: column;
   gap: var(--space-8);
 
-  max-width: 700px;
+  max-width: 100%;
 
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
