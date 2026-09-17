@@ -363,7 +363,7 @@ contactTriggers.forEach((trigger) => {
 ======================================== */
 
 emailjs.init({
-   publicKey: "C9lKxIcMlLcPw7Qyq"
+  publicKey: "C9IKxIcMLcPW7QYq"
 });
 
 const contactForm = document.querySelector("#contact-form");
@@ -376,66 +376,26 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.className = "form-status";
 
   emailjs.sendForm(
-  "service_bj1iwac",
-  "template_h2im7vx",
-  contactForm
-)
+    "service_ezhob2u",
+    "template_t0s1jyi",
+    contactForm
+  )
   .then(() => {
-
     formStatus.textContent =
       "Your message has been sent successfully.";
 
     formStatus.classList.add("success");
 
     contactForm.reset();
-
   })
   .catch((error) => {
-  console.error("EmailJS error:", error);
-  console.error("Status:", error.status);
-  console.error("Text:", error.text);
+    console.error("EmailJS error:", error);
+    console.error("Status:", error.status);
+    console.error("Text:", error.text);
 
-  formStatus.textContent =
-    "Something went wrong. Please try again.";
+    formStatus.textContent =
+      "Something went wrong. Please try again.";
 
-  formStatus.classList.add("error");
-});
-});
-/* ========================================
-   CLOSE CONTACT MODAL
-======================================== */
-
-contactClose.addEventListener("click", () => {
-  contactModal.classList.remove("contact-modal--is-open");
-});
-
-/* ========================================
-   CLOSE WITH ESC
-======================================== */
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    contactModal.classList.remove("contact-modal--is-open");
-  }
-});
-document.querySelectorAll(".session-card_").forEach((card) => {
-
-  const radio = card.querySelector('input[type="radio"]');
-
-  radio.addEventListener("change", () => {
-
-    const options = card.closest(".therapy-card__options");
-
-    options
-      .querySelectorAll(".session-card")
-      .forEach((item) => {
-        item.classList.remove("session-card--selected");
-      });
-
-    if (radio.checked) {
-      card.classList.add("session-card--selected");
-    }
-
+    formStatus.classList.add("error");
   });
-
 });
