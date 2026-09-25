@@ -287,14 +287,19 @@ body {
 /* ---------- Description ---------- */
 
 .hero__description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   font-size: var(--fs-body-lg);
   line-height: 1.8;
   color: var(--clr-text-secondary);
   margin-bottom: var(--space-24);
+  
 }
 /* Collapsed state */
 
 .hero__description.collapsed {
+  
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
@@ -309,6 +314,7 @@ body {
   overflow: visible;
 }
 .hero__description p {
+  margin-bottom: 12px;
   font-size: 1.4rem;
   line-height: 1.8;
   color: var(--clr-text-secondary);
@@ -436,7 +442,7 @@ body {
 }
 .practices__description {
   padding-top: 12px;
-  max-width: 50%;
+  width: 100% ;
   margin: 0 auto;
   /* padding-top: 24px; */
   text-align: center;
@@ -770,7 +776,7 @@ body {
   height: auto;
   padding: 1rem 2rem;
   border: 1px solid var(--clr-secondary-300);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md  );
   background: var(--clr-white);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
@@ -1163,7 +1169,7 @@ body
   overflow: hidden;
 }
 .online-booking__trigger,
-.booking-modal__trigger{
+.booking-trigger{
   width: 100%;
   justify-content: center;
 }
@@ -1212,7 +1218,7 @@ body
 }
 
 .programme-container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1254,7 +1260,6 @@ body
   display: flex;
   gap: 20px;
   padding: 16px 0;
-  border-bottom: 1px solid #ddd;
   font-size: 18px;
 }
 
@@ -1383,7 +1388,7 @@ body
 
 .training-section {
   max-width: var(--container-width);
-  margin: 4rem auto;
+  margin: 2rem auto;
   text-align: center;
   padding: 0 20px;
 }
@@ -1440,7 +1445,7 @@ body
 }
 
 .upcoming-retreats {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 2rem auto;
 
   display: grid;
@@ -2484,7 +2489,7 @@ body
   background: var(--clr-primary-100);
   color: var(--clr-primary-600);
 
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 
 /* ========================================
@@ -2553,28 +2558,36 @@ body
 
 .form-group input,
 .form-group textarea {
+
   width: 100%;
-
   padding: 0.85rem 1rem;
-
   border: 1px solid var(--clr-primary-200);
   border-radius: 0.6rem;
-
   background: white;
-
   color: var(--clr-primary-950);
-
   font-family: inherit;
   font-size: 1rem;
-
   outline: none;
-
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease,
     background 0.25s ease;
 }
-
+.form-group select{
+   width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--clr-primary-200);
+  border-radius: 0.6rem;
+  background: white;
+  color: var(--clr-primary-950);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--clr-primary-400);
