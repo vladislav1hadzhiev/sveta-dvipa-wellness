@@ -303,6 +303,7 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
+  line-clamp: 8;
 
   overflow: hidden;
 }
@@ -1326,7 +1327,7 @@ body
 .contact-trigger {
   display: flex;
   flex-direction: row-reverse;
-  align-self: flex-end;
+  padding-right: 18px;
   border: none;
   align-items: center;
   /* gap: 12px; */
@@ -1450,7 +1451,7 @@ body
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 2rem;
   align-items: center;
 }
 

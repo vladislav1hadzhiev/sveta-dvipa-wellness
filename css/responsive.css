@@ -5,6 +5,21 @@
     gap: 0.5rem;
   }
 }
+@media (max-width : 1366px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .upcoming-retreats{
+     display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem;
+  align-items: center;
+  }
+}
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1400px) {
   .main {
