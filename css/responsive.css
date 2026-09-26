@@ -4,22 +4,20 @@
     align-items: center;
     gap: 0.5rem;
   }
-}
-@media (max-width : 1366px) {
-  .main {
-    width: 100%;
-    max-width: 100%;
-    margin-inline: auto;
-    overflow: hidden;
+  .therapy-card__description{
+    font-size: 1.4rem;
   }
-  .upcoming-retreats{
-     display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 2rem;
-  align-items: center;
+  .therapy-card-big .therapy-card__content p {
+    font-size: 1.4rem;
+  }
+  .therapy-card-list li{
+    font-size: 1.2rem;
+  }
+  .therapy-card__description_info{
+    font-size: 16px;
   }
 }
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1400px) {
   .main {
@@ -56,6 +54,9 @@
   .therapy-card__description{
     font-size: 1.4rem;
   }
+  .guidance-card {
+   padding: 14px;
+  }
   .retreats {
     width: 96%;
 
@@ -73,6 +74,21 @@
   .footer__divider {
     width: calc(100% + (var(--container-padding) * 2));
     margin-left: calc(var(--container-padding) * -1);
+  }
+}
+@media (max-width : 1366px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+  .upcoming-retreats{
+     display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem;
+  align-items: center;
   }
 }
 @media  (max-width: 1340px){
