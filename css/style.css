@@ -55,12 +55,15 @@ body {
 =========================== */
 
 .header {
-  padding: 0.8rem 0;
+  padding: 1rem 0;
+  z-index: 1000;
 }
+
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .logo img {
   width: 320px;
@@ -430,7 +433,7 @@ body {
   margin-bottom: var(--space-32);
 }
 .practices__content {
-  color: var(--Neutral-900, #2e2e2c);
+  color: var(--clr-text-primary );
   text-align: center;
   font-family: "DM Sans";
   padding-top: 24px;
@@ -438,6 +441,24 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  z-index: 2;
+}
+.session-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.session-info span {
+    font-weight: 600;
+    color: var(--clr-accent-500 );
+}
+
+.session-info small {
+    font-size: 0.9rem;
+    opacity: 0.75;
 }
 .practices__description {
   width: 80%;
@@ -622,6 +643,7 @@ body {
   height: 18rem;
   margin: 2rem auto 0;
   overflow: hidden;
+  z-index: 0;
 }
 
 /* ========================================
@@ -772,7 +794,7 @@ body {
 .therapy-card {
   display: flex;
   flex-direction: column;
-  width: 26rem;
+  width: 28rem;
   height: auto;
   padding: 1rem 2rem;
   border: 1px solid var(--clr-secondary-300);
@@ -789,11 +811,10 @@ body {
             THERAPY GRIDS
 ======================================== */
 
-.therapy-grid-Ayurvedic,
-.therapy-grid-TCM {
+.therapy-grid-Ayurvedic {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
   width: 100%;
    margin: 1.5rem auto 0;
@@ -801,11 +822,18 @@ body {
   margin-inline: auto;
   padding-inline: var(--container-padding);
 }
-/* .therapy-grid-tcm {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.therapy-grid-TCM {
+  
+ display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
-} */
+  gap: 1rem;
+  width: 100%;
+   margin: 1.5rem auto 0;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
 .therapy-card-online {
   display: flex;
   flex-direction: row;
@@ -823,7 +851,7 @@ body {
   height: auto;
   padding: 1rem 2rem;
   border: 1px solid var(--clr-secondary-300);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md);
   background: var(--clr-white);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
@@ -851,8 +879,18 @@ body {
   max-width: var(--container-width);
   margin: 1.5rem auto 0;
    margin-inline: auto;
-  /* padding-inline: var(--container-padding); */
-  padding-inline: 3.2rem;
+  padding-inline: var(--container-padding);
+ 
+}
+.ayurvedic-big{
+ display: grid;
+    grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 1.5rem auto 0;
+   margin-inline: auto;
+  padding-inline: var(--container-padding);
 }
 .card-big{
  display: grid;
@@ -863,13 +901,14 @@ body {
     box-sizing: border-box;
 }
 .Ayurvedic{
-  display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
     gap: 2rem;
     width: 100%;
     box-sizing: border-box;
 }
 .card-big-Ayurvedic{
+  width: auto;
   display: flex;
   flex-direction: column;
   
@@ -891,6 +930,7 @@ body {
 }
 
 .therapy-card-big .therapy-card {
+  max-width: var(--container-width);
   width: 100%;
   height: auto;
   padding: 1rem 1.5rem;
@@ -1021,7 +1061,7 @@ body
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.75rem;
+  
   margin-bottom: var(--space-4);
 }
 
@@ -1068,6 +1108,7 @@ body
   gap: var(--space-12);
   margin-top: var(--space-4);
   padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 .therapy-card__sessions-title {
@@ -1191,7 +1232,7 @@ body
 .retreats {
   position: relative;
   min-height: 400px;
-
+  /* z-index: 1; */
   background-image: url("../assets/images/yoga_class.jpeg");
   background-size: cover;
   background-position: center 70%;
@@ -1212,10 +1253,11 @@ body
 .booking-trigger{
   width: 100%;
   justify-content: center;
+  z-index: 1;
 }
 .retreats_container {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 
   width: 100%;
 }
@@ -1316,6 +1358,7 @@ body
   padding: 20px;
   background: #f5f1e8;
   overflow: hidden;
+  z-index: -1;
 }
 
 .rasayana-content {
@@ -1366,7 +1409,7 @@ body
 }
 .contact-trigger {
   flex: 0 0 auto;
-  margin-bottom: auto;
+  margin-bottom: 4px;
   display: flex;
   flex-direction: row-reverse;
   padding-right: 18px;
@@ -1923,6 +1966,8 @@ body
   display: block;
 }
 .footer__description {
+  font-size: 1.4rem;
+  line-height: 1.2;
   max-width: 22rem;
   text-align: center;
   font-size: var(--fs-body);
@@ -1953,6 +1998,7 @@ body
   gap: var(--space-16);
 }
 .footer__list a {
+  font-size: 1.2rem;
   color: var(--clr-text-primary);
   text-decoration: none;
   transition: color 0.3s ease;

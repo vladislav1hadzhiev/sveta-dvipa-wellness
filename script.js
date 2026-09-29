@@ -381,3 +381,21 @@ bookingTriggers.forEach((trigger) => {
   });
 
 });
+
+const header = document.querySelector("header");
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scroll down → hide
+        header.classList.add("header-hidden");
+    } else {
+        // Scroll up → show
+        header.classList.remove("header-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+});
