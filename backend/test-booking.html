@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Booking</title>
+</head>
+
+<body>
+
+  <h1>Test Booking</h1>
+
+  <form id="booking-form">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Name"
+      required
+    >
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email"
+      required
+    >
+
+    <input
+  type="text"
+  id="service"
+  placeholder="Service"
+  value="Test Service"
+  required
+>
+
+    <input
+      type="date"
+      id="date"
+      required
+    >
+
+    <input
+      type="time"
+      id="time"
+      required
+    >
+
+    <button type="submit">
+      Test Booking
+    </button>
+
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const form = document.querySelector("#booking-form");
+const result = document.querySelector("#result");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const booking = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    service: document.querySelector("#service").value,
+    date: document.querySelector("#date").value,
+    time: document.querySelector("#time").value
+  };
+
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:3000/api/bookings",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(booking)
+      }
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+
+    result.textContent = data.message;
+
+  } catch (error) {
+    console.error(error);
+
+    result.textContent = "Something went wrong.";
+  }
+});
+  </script>
+
+</body>
+</html>
