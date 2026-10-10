@@ -187,13 +187,13 @@ onlineBookingTriggers.forEach((trigger) => {
 
     const service = card.dataset.service;
     const duration = card.dataset.duration;
-    const price = card.dataset.price;
+    // const price = card.dataset.price;
     const session = card.dataset.session;
 
     console.log("ONLINE BOOKING");
     console.log("Service:", service);
     console.log("Duration:", duration);
-    console.log("Price:", price);
+    // console.log("Price:", price);
     console.log("Session:", session);
 
     serviceInput.value = service;
@@ -202,7 +202,7 @@ onlineBookingTriggers.forEach((trigger) => {
       `Hello, I am interested in an online ${service} session.\n\n` +
       `Session: ${session}\n` +
       `Duration: ${duration} min\n` +
-      `Price: €${price}\n\n` +
+      // `Price: €${price}\n\n` +
       `I would like to send a request for an online session.`;
 
     if (contactSubmitButton) {
@@ -325,10 +325,10 @@ bookingTriggers.forEach((trigger) => {
       card.dataset.duration ||
       sessionCard?.querySelector(".session-card__duration")?.textContent.trim();
 
-    const price =
-      card.dataset.price
-        ? `€${card.dataset.price}`
-        : sessionCard?.querySelector(".session-card__price")?.textContent.trim();
+    // const price =
+    //   card.dataset.price
+    //     ? `€${card.dataset.price}`
+    //     : sessionCard?.querySelector(".session-card__price")?.textContent.trim();
 
     const session =
       card.dataset.session ||
@@ -369,8 +369,7 @@ bookingTriggers.forEach((trigger) => {
       `Hello, I am interested in ${service}. ` +
       `I would like to book this session.\n\n` +
       `Session: ${session}\n` +
-      `Duration: ${duration}\n` +
-      `Price: ${price}`;
+      `Duration: ${duration}\n` 
 
     // ========================================
     // OPEN CONTACT MODAL
