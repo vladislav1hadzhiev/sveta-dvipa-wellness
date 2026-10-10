@@ -794,9 +794,9 @@ body {
 .therapy-card {
   display: flex;
   flex-direction: column;
-  width: 28rem;
+  width: 100%;
   height: auto;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border: 1px solid var(--clr-secondary-300);
   border-radius: var(--radius-md  );
   background: var(--clr-white);
