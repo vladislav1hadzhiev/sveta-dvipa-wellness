@@ -787,7 +787,7 @@
   .header__actions {
     grid-area: actions;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 16px;
   }
   .header__actions span {
@@ -1095,7 +1095,7 @@
   }
     .header__actions {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-self: stretch;
       width: 100%;
       padding-top: 12px;
@@ -1175,6 +1175,9 @@
   .header__actions {
     gap: 1rem;
     font-size: 1.2rem;
+  }
+  .header__actions span {
+    font-size: 1rem;
   }
   .therapy-card__footer{
     margin-top: 4px;
