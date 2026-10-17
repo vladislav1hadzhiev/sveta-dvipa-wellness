@@ -970,7 +970,7 @@ body {
   font-size: 1.4rem;
 }
 .therapy-card-big .therapy-card__footer {
-  margin-top: 0;
+  margin-top: 32px;
 }
 .therapy-card__intro {
   font-size: 22px;
