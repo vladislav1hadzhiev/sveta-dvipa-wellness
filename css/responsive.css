@@ -5,10 +5,10 @@
     gap: 0.5rem;
   }
   .therapy-card__description{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .therapy-card-big .therapy-card__content p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .therapy-card-list li{
     font-size: 1.2rem;
@@ -1101,11 +1101,9 @@
       padding-top: 12px;
     }
     
-  .header .container{
-    gap: 18px;
-  }
+  
   .header__actions{
-    gap: 24px;
+    gap: 14px;
   }
   .navigation{
   padding-bottom: 0;
